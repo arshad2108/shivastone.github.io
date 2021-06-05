@@ -120,10 +120,10 @@
 	</head>
 	<body>
 		<form id="sub">
-			<div class="container" id = "customcontainer"  style="width:100%; margin-top: 50px;">
-				<div style="width:40%; float:left">
+			<div class="row" id = "customcontainer"  style="width:100%; margin-top: 50px;">
+				<div class="col-md-5">
 					<div class="container">
-						<div class="row col-md-6 col-md-offset-3">
+						<div class="row col-md-5 col-md-offset-3">
 							<div class="panel panel-primary">
 								<div class="panel-heading text-center">
 									<h1>Invoice Details</h1>
@@ -221,9 +221,9 @@
 						</div>
 					</div>
 				</div>
-				<div style="width:40%; float:left">
+				<div class="col-md-5">
 					<div class="container">
-						<div class="row col-md-6 col-md-offset-3">
+						<div class="row col-md-5 col-md-offset-3">
 							<div class="panel panel-primary">
 								<div class="panel-heading text-center">
 									<h1>Customer Details</h1>
@@ -326,6 +326,10 @@
 											</div>
 										</div>
 
+										<div id="customdiv" class="customdiv">
+											<input id="buttoninsert" type="button" onclick="mySubmit()"  value="Submit" class="buttoninsert" />
+										</div>
+
 										
 									 
 										
@@ -337,11 +341,10 @@
 							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
-			<div id="customdiv" class="customdiv">
-				<input id="buttoninsert" type="button" onclick="mySubmit()"  value="Submit" class="buttoninsert" />
-			</div>
+			
 			
 		</form>
 		<br>
