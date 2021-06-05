@@ -83,6 +83,7 @@ function myProceed(){
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
 		window.print()
+		window.location.replace("index.html");
 
 
 	}
