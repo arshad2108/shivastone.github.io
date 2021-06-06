@@ -10,7 +10,16 @@ function myPreview() {
 		var buyer_state = document.getElementById("buyer_state").value;
 		var quantity = document.getElementById("quantity").value;
 		var rate = document.getElementById("rate").value;
-		
+
+		var no = document.getElementById("invoice_no").value;
+		var date = document.getElementById("invoice_date").value;
+		var permit = document.getElementById("permit").value;
+		var destination = document.getElementById("destination").value;
+		var vehicle_no = document.getElementById("vehicle_no").value;
+
+		document.getElementById("inv_date").innerHTML=""+date+"";
+
+		document.getElementById("inv_no").innerHTML=""+no+"";
 		
 		
 
@@ -26,6 +35,7 @@ function myPreview() {
 
 		document.getElementById("inv_quantity").innerHTML=""+quantity+"";
 		document.getElementById("inv_rate").innerHTML=""+rate+"";
+		
 
 		var sumcost=quantity*rate;
 		var tax=sumcost*0.05;
@@ -41,6 +51,7 @@ function myPreview() {
 		document.getElementById("inv_tx_stax").innerHTML=""+stax+"";
 		document.getElementById("inv_tx_tax").innerHTML=""+tax+"";
 		document.getElementById("inv_tx_final").innerHTML=""+total+"";
+
 		
 	return;
 }
@@ -63,13 +74,14 @@ function showOptions(str){
 }
 
 function mySubmit(){
-	document.getElementById("forminside").style.display="none";
+	
 	document.getElementById("customdiv3").style.display="block";
 	return;
 
 }
 
 function myPrint(){
+	document.getElementById("forminside").style.display="none";
 	document.getElementById("verify").style.display="block";
 	document.getElementById("printbutton").style.display="none";
 	document.getElementById("proceedbutton").style.display="block";
@@ -80,7 +92,6 @@ function myProceed(){
 	var pwd=document.getElementById("pwd").value;
 	if(pwd=="Shiva@786"){
 		document.getElementById("proceedbutton").style.display="none";
-		document.getElementById("navigation").style.display="none";
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
 		window.print()
