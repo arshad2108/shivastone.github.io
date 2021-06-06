@@ -74,18 +74,39 @@ function myPreview() {
 
 		var sumcost=quantity*rate;
 		var tax=sumcost*0.05;
-		var ctax=tax*0.5;
-		var stax=tax*0.5;
+
+		var igstyes=document.getElementById("igstyes");
+		var igstno=document.getElementById("igstno");
+		var ctax;
+		var stax;
+		var igst;
+		if(igstyes.checked){
+			
+			igst=tax;
+
+		}
+		if(igstno.checked){
+			ctax=tax*0.5;
+			stax=tax*0.5;
+			
+		}
+
+		
 		var total=tax+sumcost;
 
 		var Quantity=helptrim(quantity,3);
+
 		
 		var Rate=helptrim(rate,2);
 		var Tax=helptrim(tax,2);
+
 		var Ctax=helptrim(ctax,2);
 		var Stax=helptrim(stax,2);
 		var Total=helptrim(total,2);
 		var Sumcost=helptrim(sumcost,2);
+		var Igst=helptrim(igst,2)
+
+		
 
 
 		document.getElementById("inv_quantity").innerHTML=Quantity;
@@ -97,6 +118,7 @@ function myPreview() {
 		document.getElementById("inv_tx_sumtotal").innerHTML=Sumcost;
 		document.getElementById("inv_tx_ctax").innerHTML=Ctax;
 		document.getElementById("inv_tx_stax").innerHTML=Stax;
+		document.getElementById("inv_tx_itax").innerHTML=Igst;
 		document.getElementById("inv_tx_tax").innerHTML=Tax;
 		document.getElementById("inv_tx_final").innerHTML=Total;
 
@@ -116,6 +138,11 @@ function showOptions(str){
 			}
 			if (str=="No"){
 			document.getElementById("buyer_part").style.display="block";
+			document.getElementById("buyername").value="";
+			document.getElementById("buyer_add").value="";
+			document.getElementById("buyer_gst").value="";
+			document.getElementById("buyer_state").value="";
+			
 			}
 	return;
 
