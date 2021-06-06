@@ -80,6 +80,7 @@ function myProceed(){
 	var pwd=document.getElementById("pwd").value;
 	if(pwd=="Shiva@786"){
 		document.getElementById("proceedbutton").style.display="none";
+		document.getElementById("navigation").style.display="none";
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
 		window.print()
