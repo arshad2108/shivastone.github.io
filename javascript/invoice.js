@@ -113,6 +113,7 @@ function myProceed(){
 		document.getElementById("proceedbutton").style.display="none";
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
+		document.getElementById("navigation").style.display="none";
 		window.print()
 		window.location.replace("index.html");
 
