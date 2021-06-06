@@ -16,11 +16,18 @@ function myPreview() {
 		var permit = document.getElementById("permit").value;
 		var destination = document.getElementById("destination").value;
 		var vehicle_no = document.getElementById("vehicle_no").value;
+		date=date.split("-").reverse().join("-");
 		
 
 		document.getElementById("inv_date").innerHTML=""+date+"";
 
 		document.getElementById("inv_no").innerHTML=""+no+"";
+		document.getElementById("inv_permit").innerHTML=""+permit+"";
+		document.getElementById("inv_destination").innerHTML=""+destination+"";
+		document.getElementById("inv_vehicle").innerHTML=""+vehicle_no+"";
+		
+
+
 		
 		
 
@@ -34,8 +41,7 @@ function myPreview() {
 		document.getElementById("inv_buyer_gst").innerHTML=""+buyer_gst+"";
 		document.getElementById("inv_buyer_state").innerHTML=""+buyer_state+"";
 
-		document.getElementById("inv_quantity").innerHTML=""+quantity+"";
-		document.getElementById("inv_rate").innerHTML=""+rate+"";
+		
 		
 
 		var sumcost=quantity*rate;
@@ -44,14 +50,26 @@ function myPreview() {
 		var stax=tax*0.5;
 		var total=tax+sumcost;
 
-		document.getElementById("inv_sumcost").innerHTML=""+sumcost+"";
-		document.getElementById("inv_tax").innerHTML=""+tax+"";
-		document.getElementById("inv_total").innerHTML=""+total+"";
-		document.getElementById("inv_tx_sumtotal").innerHTML=""+sumcost+"";
-		document.getElementById("inv_tx_ctax").innerHTML=""+ctax+"";
-		document.getElementById("inv_tx_stax").innerHTML=""+stax+"";
-		document.getElementById("inv_tx_tax").innerHTML=""+tax+"";
-		document.getElementById("inv_tx_final").innerHTML=""+total+"";
+		var Quantity=quantity.toFixed(3);
+		var Rate=rate.toFixed(2):
+		var Tax=tax.toFixed(2):
+		var Ctax=ctax.toFixed(2):
+		var Stax=stax.toFixed(2):
+		var Total=total.toFixed(2);
+		var Sumcost=sumcost.toFixed(2);
+
+
+		document.getElementById("inv_quantity").innerHTML=Quantity;
+		document.getElementById("inv_rate").innerHTML=Rate;
+
+		document.getElementById("inv_sumcost").innerHTML=Sumcost;
+		document.getElementById("inv_tax").innerHTML=Tax;
+		document.getElementById("inv_total").innerHTML=Total;
+		document.getElementById("inv_tx_sumtotal").innerHTML=Sumcost;
+		document.getElementById("inv_tx_ctax").innerHTML=Ctax;
+		document.getElementById("inv_tx_stax").innerHTML=Stax;
+		document.getElementById("inv_tx_tax").innerHTML=Tax;
+		document.getElementById("inv_tx_final").innerHTML=Total;
 
 		
 	return;
