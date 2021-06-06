@@ -1,3 +1,31 @@
+function helptrim(x,n){
+	var y=x*(Math.pow(10,n));
+	
+	
+	var a=y.toString();
+	var len=a.length;
+	if (a.indexOf(".")!=-1){
+		len=a.indexOf(".")
+
+	}
+	
+	
+	var w=a.slice(0,len);
+	//console.log(w);
+	var v=w.length;
+	//console.log(v);
+	
+	var z=w.slice(0,v-n);
+	//console.log(z);
+	//console.log(w);
+	var e=w.slice(v-n,v);
+	//console.log(e);
+	return z+"."+e;
+
+}
+
+
+
 function myPreview() {
 
 		var consigneename = document.getElementById("consigneename").value;
@@ -50,13 +78,14 @@ function myPreview() {
 		var stax=tax*0.5;
 		var total=tax+sumcost;
 
-		var Quantity=quantity.toFixed(3);
-		var Rate=rate.toFixed(2):
-		var Tax=tax.toFixed(2):
-		var Ctax=ctax.toFixed(2):
-		var Stax=stax.toFixed(2):
-		var Total=total.toFixed(2);
-		var Sumcost=sumcost.toFixed(2);
+		var Quantity=helptrim(quantity,3);
+		
+		var Rate=helptrim(rate,2);
+		var Tax=helptrim(tax,2);
+		var Ctax=helptrim(ctax,2);
+		var Stax=helptrim(stax,2);
+		var Total=helptrim(total,2);
+		var Sumcost=helptrim(sumcost,2);
 
 
 		document.getElementById("inv_quantity").innerHTML=Quantity;
@@ -111,9 +140,9 @@ function myProceed(){
 	var pwd=document.getElementById("pwd").value;
 	if(pwd=="Shiva@786"){
 		document.getElementById("proceedbutton").style.display="none";
+		document.getElementById("navigation").style.display="none";
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
-		document.getElementById("navigation").style.display="none";
 		window.print()
 		window.location.replace("index.html");
 
