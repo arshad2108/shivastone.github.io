@@ -16,8 +16,10 @@ function myPreview() {
 		var permit = document.getElementById("permit").value;
 		var destination = document.getElementById("destination").value;
 		var vehicle_no = document.getElementById("vehicle_no").value;
+		var s = date.toString().split(' ');
+    		var date2=[s[2],s[1],s[3]].join('-');
 
-		document.getElementById("inv_date").innerHTML=""+date+"";
+		document.getElementById("inv_date").innerHTML=""+date2+"";
 
 		document.getElementById("inv_no").innerHTML=""+no+"";
 		
