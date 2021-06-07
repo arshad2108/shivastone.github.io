@@ -170,8 +170,8 @@ function myProceed(){
 		document.getElementById("navigation").style.display="none";
 		document.getElementById("verify").style.display="none";
 		document.getElementById("prompt").style.display="none";
-		window.print()
-		//window.location.replace("index.html");
+		window.print();
+		window.location.replace("index.html");
 
 
 	}
