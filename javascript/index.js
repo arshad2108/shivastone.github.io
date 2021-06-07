@@ -1,4 +1,13 @@
-
+document.onreadystatechange = function() {
+	if (document.readyState !== "complete") {
+		
+		
+	} else {
+		document.querySelector(
+		  "#preload").style.display = "none";
+		document.getElementById("loaded").style.display = "block";
+	}
+};
 
  
 function navigate(obj){
