@@ -1,16 +1,8 @@
 
 
- function transit(w){
-	
-	
-	document.getElementById(w).className="animated fadeOutRight";
-
-
- }
-
+ 
 function navigate(obj){
 // Get all buttons with class="btn" inside the container
-var btns = document.getElementsByTagName("ul");
 
 // Loop through the buttons and add the active class to the current/clicked button
 
@@ -29,14 +21,15 @@ var btns = document.getElementsByTagName("ul");
 		obj.className ="active";
 		var cur=obj.id;
 		var v=cur.slice(4);
-		transit(w);
+		
+		document.getElementById(w).className="animated fadeOutRight";
 		setTimeout(function() {
 			//console.log("waiting");
 			document.getElementById(w).style.display="none";
-		document.getElementById(v).style.display="block";
+			document.getElementById(v).style.display="block";
 		
 		
-		document.getElementById(v).className="animated fadeInLeft";
+			document.getElementById(v).className="animated fadeInLeft";
 			
 		}, 550 );
 		
