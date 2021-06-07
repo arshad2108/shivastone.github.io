@@ -9,10 +9,11 @@
   <title>Shiva Stone</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
 
-  <link href="/css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+	
 
 </head>
 
@@ -27,16 +28,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand logo-nav" href="index.html"><img src="../img/logo.png" width="170" height="100"></a>
+        <a class="navbar-brand logo-nav" href="index.html"><img src="img/logo.png" width="170" height="100"></a>
       </div>
       <!-- nav-bar header end -->
 
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home <span>Main Page</span></a></li>
-          <li><a href="about.html">About<span>Who Are We?</span></a></li>
-          <li><a href="service.html">Services <span>What do we do?</span></a></li>
-          <li><a href="contact.html">Contact <span>Get in touch</span></a></li>
+          <li onclick="navigate(this)" id="nav_index" class="active"><a  >Home <span>Main Page</span></a></li>
+          <li onclick="navigate(this)" id="nav_about" ><a >About<span>Who Are We?</span></a></li>
+          <li onclick="navigate(this)" id="nav_services"><a >Services <span>What do we do?</span></a></li>
+          <li onclick="navigate(this)" id="nav_contact"><a>Contact <span>Get in touch</span></a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -44,128 +45,496 @@
   </nav>
 
 
-  <section class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="animated fadeInLeft">
-            <h1>Invoice Generation</h1>
-
-            <p>Click this to create invoice.</p>
-            <a href="invoice.html" class="btn btn-primary btn-lg">Create Invoice</a>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="animated fadeInUp">
-            <img src="../img/logos.png" alt="logo">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!--
-  <section class="section-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 text-center">
-          <span class="fa-stack fa-lg fa-4x">
-					  <i class="fa fa-circle fa-stack-2x fa-color"></i>
-					  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
-					</span>
-          <h3>Valid Code</h3>
-        </div>
-        <div class="col-md-3 text-center">
-          <span class="fa-stack fa-lg fa-4x">
-					  <i class="fa fa-circle fa-stack-2x fa-color"></i>
-					  <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-					</span>
-          <h3>Responsive</h3>
-        </div>
-        <div class="col-md-3 text-center">
-          <span class="fa-stack fa-lg fa-4x">
-					  <i class="fa fa-circle fa-stack-2x fa-color"></i>
-					  <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
-					</span>
-          <h3>Annimation Ready</h3>
-        </div>
-        <div class="col-md-3 text-center">
-          <span class="fa-stack fa-lg fa-4x">
-					  <i class="fa fa-circle fa-stack-2x fa-color"></i>
-					  <i class="fa fa-gear fa-stack-1x fa-inverse"></i>
-					</span>
-          <h3>Customizing</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-secondary slogan">
-    <h1>Take a closer look</h1>
-    <p>Suspendisse vel velit laoreet, eleifend sem in, porta elit.</p>
-    <a href="about.html" class="btn btn-lg btn-default">More Info</a>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="wow fadeInLeft">
-            <h2 class="page-header">Business Theme Includes...</h2>
-            <ul class="feature-list">
-              <li><i class="glyphicon glyphicon-ok"></i> Bootstrap 3 Framework</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Mobile Responsive Design</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Minimal Custom CSS Styles</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Unstyled: Add Your Own Style and Content!</li>
-              <li><i class="glyphicon glyphicon-ok"></i> 100% <strong>Free</strong> to Use</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Open Source: Use for any project, private or commercial!</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="wow fadeInRight">
-            <img src="img/macbook.png" class="img-responsive">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wow fadeIn">
-    <section class="section-primary">
+  <!--home page info starts here -->
+  <div id="index" style="display: block;">
+    <section class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <img src="img/sample1.jpg" class="img-circle img-responsive">
+          <div class="col-md-8">
+            <div class="animated fadeInLeft">
+              <h1>Invoice Generation</h1>
+
+              <p>Click this to create invoice.</p>
+              <a href="invoice.html" class="btn btn-primary btn-lg">Create Invoice</a>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h2 class="page-header">More Features Include...</h2>
-            <ul class="feature-list">
-              <li><i class="glyphicon glyphicon-ok"></i> Bootstrap 3 Framework</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Mobile Responsive Design</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Minimal Custom CSS Styles</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Unstyled: Add Your Own Style and Content!</li>
-              <li><i class="glyphicon glyphicon-ok"></i> 100% <strong>Free</strong> to Use</li>
-              <li><i class="glyphicon glyphicon-ok"></i> Open Source: Use for any project, private or commercial!</li>
-            </ul>
+          <div class="col-md-4">
+            <div class="animated fadeInUp">
+              <img src="img/logo.png" alt="logo" width="340" height="200">
+            </div>
           </div>
         </div>
       </div>
     </section>
+  <!--
+    <section class="section-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <span class="fa-stack fa-lg fa-4x">
+              <i class="fa fa-circle fa-stack-2x fa-color"></i>
+              <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Valid Code</h3>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="fa-stack fa-lg fa-4x">
+              <i class="fa fa-circle fa-stack-2x fa-color"></i>
+              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Responsive</h3>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="fa-stack fa-lg fa-4x">
+              <i class="fa fa-circle fa-stack-2x fa-color"></i>
+              <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Annimation Ready</h3>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="fa-stack fa-lg fa-4x">
+              <i class="fa fa-circle fa-stack-2x fa-color"></i>
+              <i class="fa fa-gear fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Customizing</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-secondary slogan">
+      <h1>Take a closer look</h1>
+      <p>Suspendisse vel velit laoreet, eleifend sem in, porta elit.</p>
+      <a href="about.html" class="btn btn-lg btn-default">More Info</a>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="wow fadeInLeft">
+              <h2 class="page-header">Business Theme Includes...</h2>
+              <ul class="feature-list">
+                <li><i class="glyphicon glyphicon-ok"></i> Bootstrap 3 Framework</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Mobile Responsive Design</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Minimal Custom CSS Styles</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Unstyled: Add Your Own Style and Content!</li>
+                <li><i class="glyphicon glyphicon-ok"></i> 100% <strong>Free</strong> to Use</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Open Source: Use for any project, private or commercial!</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wow fadeInRight">
+              <img src="img/macbook.png" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wow fadeIn">
+      <section class="section-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/sample1.jpg" class="img-circle img-responsive">
+            </div>
+            <div class="col-md-6">
+              <h2 class="page-header">More Features Include...</h2>
+              <ul class="feature-list">
+                <li><i class="glyphicon glyphicon-ok"></i> Bootstrap 3 Framework</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Mobile Responsive Design</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Minimal Custom CSS Styles</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Unstyled: Add Your Own Style and Content!</li>
+                <li><i class="glyphicon glyphicon-ok"></i> 100% <strong>Free</strong> to Use</li>
+                <li><i class="glyphicon glyphicon-ok"></i> Open Source: Use for any project, private or commercial!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>Business Theme Copyright &copy; 2017 - <a href="#">Terms</a> &middot; <a href="#">Privacy</a></p>
+    </footer>
+  -->
+
   </div>
 
-  <footer>
-    <p>Business Theme Copyright &copy; 2017 - <a href="#">Terms</a> &middot; <a href="#">Privacy</a></p>
-  </footer>
--->
+
+  <!--About Info starts here-->
+  <div id="about" style="display: none;">
+    <section class="section-title">
+        <div class="container">
+        <h1>About<small> Who Are We?</small></h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="active">About</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                  <img src="../img/quartz-lumps-500x500.jpg" alt="quartz" height="300" width="400" class="img-responsive">  
+                </div>
+                <div class="col-md-8">
+                    <h2>Welcome to our company</h2>
+                    <p>We M/S Stone started producing Industrial Mineral Powder in 2019 in Patratu, Ramgarh, Jharkhand. Since then, we have grown into a diverse and respected enterprise. We have set new benchmarks in the industry with our high quality products and commitment to customer satisfaction.</p>
+
+                    <p>We are a name that reflects commitment to quality. We diligently follow the policy of customer satisfaction. In order to retain their confidence, we deliver the raw materials as per their requirements.</p>
+
+                    <p>The company is dealing in an array of products such as Quartz Boulder, Quartz Metal etc. We are situated in Sutharpur, Patratu, Ramgarh, Jharkhand.
+                    <br>
+                    <br>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Us!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="col-lg-12">
+            <h2 class="page-header">Meet Us</h2>
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/sajjad.jpg" alt="sajjad">
+            <h3>Sajjad Raza <small>Owner</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus </p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+  <!--
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/man1.jpg" alt="man">
+            <h3>Jeff Bridges <small>Designer</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/man2.jpg" alt="man">
+            <h3>John Jones <small>Developer</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/woman2.jpg" alt="women">
+            <h3>Beth johnson <small>SalesRep</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus </p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/woman3.jpg" alt="women">
+            <h3>Sara Smith <small>Developer</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive img-thumbnail img-circle" src="../img/man2.jpg" alt="man">
+            <h3>John Jones <small>Developer</small></h3>
+            <p>Vestibulum suscipit in eros et dignissim. Proin tincidunt eros sollicitudin orci tempor, vel porta odio gravida. Morbi id lectus</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+              <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+              <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+              <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+  -->
+      </div>
+    </section>
+    <section>
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h2 class="page-header">Our Clients</h2>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img class="img-responsive img-customer" src="../img/client1.png" alt="client">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img class="img-responsive img-customer" src="../img/client2.png" alt="client">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img class="img-responsive img-customer" src="../img/client3.png" alt="client">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img class="img-responsive img-customer" src="../img/client4.png" alt="client">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+        <img class="img-responsive img-customer" src="../img/client5.png" alt="client">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img class="img-responsive img-customer" src="../img/client3.png" alt="client">
+        </div>
+
+      </div>
+    
+    </section>
+
+
+    
+    <footer>
+      
+    </footer>
+  </div>
+
+
+  <!--Service info starts here-->
+  
+  <div id="services" style="display: none;">
+    <section class="section-title">
+      <div class="container">
+        <h1>Services<small> What Do We Do?</small></h1>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="img/people.jpg" alt="people" class="img-responsive">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="page-header">Our Services</h2>
+            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          </div>
+          <div class="col-md-4">
+            <h2 class="page-header">Create Invoice</h2>
+            <p>Go here to make your Invoice.</p>
+            <a class="btn btn-primary" href="invoice.html">Generate Invoice</a>
+          </div>
+        </div>
+        <!--
+        <div class="row">
+          <div role="tabpanel">
+
+          
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Service 1</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Service 2</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Service 3</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Service 4</a></li>
+            </ul>
+
+            
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <i class="fa fa-gear pull-left fa-4x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique
+                  senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing.
+                  Pellentesque quis tristique eros, sed rutrum mauris.</p>
+                <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae
+                  augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <i class="fa fa-gear pull-left fa-4x"></i>
+
+                <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae
+                  augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <i class="fa fa-gear pull-left fa-4x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique
+                  senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing.
+                  Pellentesque quis tristique eros, sed rutrum mauris.</p>
+                <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae
+                  augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings">
+                <i class="fa fa-gear pull-left fa-4x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique
+                  senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing.
+                  Pellentesque quis tristique eros, sed rutrum mauris.</p>
+                <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae
+                  augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="page-header">Service Images</h2>
+          </div>
+
+          <div class="col-sm-4">
+            <img class="img-responsive img-thumbnail" src="../img/train1.jpg">
+            <h3>Service One</h3>
+            <p>Service one description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst.</p>
+            <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+          </div>
+
+          <div class="col-sm-4">
+            <img class="img-responsive img-thumbnail" src="/img/train1.jpg">
+            <h3>Service Two</h3>
+            <p>Service two description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst.</p>
+            <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+          </div>
+
+          <div class="col-sm-4">
+            <img class="img-responsive img-thumbnail" src="../img/train3.jpg">
+            <h3>Service Three</h3>
+            <p>Service three description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst.</p>
+            <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+
+  <!--
+    <footer>
+      <p>Business Theme Copyright &copy; 2017 - <a href="#">Terms</a> &middot; <a href="#">Privacy</a></p>
+    </footer>
+    -->
+
+  </div>
+
+
+  <!--Contact info starts here-->
+  
+  <div id="contact" style="display: none;">
+    <section class="section-title">
+      <div class="container">
+        <p> <h1>Under Construction</h1></p>
+        <!--<h1>Contact<small> Get In Touch</small></h1>-->
+      </div>
+    </section>
+  <!--
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Contact</li>
+            </ol>
+          </div>
+    </section>
+          
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+
+            <h3>Contact Us Today!</h3>
+                  <form>
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Email address</label>
+                      <input type="email" class="form-control">
+                    </div>
+                      <div class="form-group">
+                      <label>Message</label>
+                    <textarea class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Details</h3>
+                  <p>
+                      89 West Main st<br>Peabody, MA<br>
+                  </p>
+                  <p><i class="fa fa-phone"></i> 
+                      <abbr title="Phone"></abbr>: (555) 555-5555</p>
+                  <p><i class="fa fa-envelope-o"></i> 
+                      <abbr title="Email"></abbr>: <a href="mailto:name@example.com">something@something.com</a>
+                  </p>
+                  <p><i class="fa fa-clock-o"></i> 
+                      <abbr title="Hours"></abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                  <ul class="list-unstyled list-inline list-social-icons">
+                      <li>
+                          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                      </li>
+                  </ul>
+          </div>
+        </div>
+      </div>
+    </section>  
+  -->
+      
+    <footer>
+        <!--<p>Business Theme Copyright &copy; 2017 - <a href="#">Terms</a> &middot; <a href="#">Privacy</a></p>-->
+    </footer>
+  </div>
+
+
+
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="/javascript/bootstrap.min.js"></script>
-  <script src="/javascript/wow.js"></script>
-  <script src="/javascript/script.js"></script>
+  <script src="javascript/bootstrap.min.js"></script>
+  <script src="javascript/wow.js"></script>
+  <script src="javascript/index.js"></script>
+  
   <script>
     new WOW().init();
   </script>
+  
 </body>
 	
 
