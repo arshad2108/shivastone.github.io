@@ -8,14 +8,16 @@
 
 		<link rel="stylesheet" type="text/css" href="css/invoice.css" />
 		
-		  <link rel="stylesheet" type="text/css" href="/css/animate.css">
-		  <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
-		  <link rel="stylesheet" type="text/css" href="/css/style.css">
-		<script src="javascript/invoice.js">
-			<script src="javascript/index.js"></script>
-			
-			
-		</script>
+		  <link rel="stylesheet" type="text/css" href="css/animate.css">
+		  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+		
+		<script src="javascript/invoice.js"></script>	
+		<script src="javascript/index.js"></script>
+		
+		
+		
 		
 		
 	</head>
@@ -23,31 +25,30 @@
 		<div id="navigation">
 			<nav class="navbar navbar-default navbar-fixed-top">
 			    <div class="container">
-				    <div class="navbar-header">
-			      
+			      <div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				    <span class="sr-only">Toggle navigation</span>
 				    <span class="icon-bar"></span>
 				    <span class="icon-bar"></span>
 				    <span class="icon-bar"></span>
 				  </button>
-				<a class="navbar-brand logo-nav" href="index.html"><img src="../img/logo.png" width="150" height="70"></a>
-				    </div>
-			      
-			      <!-- nav-bar header end -->
-				<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-				  <li onclick="navigate(this)" id="nav_index" ><a  href="index.html">Let's Go  <span>Back to Home Page</span></a></li>
-				    
+				<a class="navbar-brand logo-nav" href="index.html"><img src="img/logo.png" width="170" height="100"></a>
 			      </div>
+			      <!-- nav-bar header end -->
 
-			      
+			      <div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+				 	
+				  <li onclick="navigate(this)" id="nav_index" ><a  href="index.html">Let's Go  <span>Back to Home Page</span></a></li>
+				</ul>
+			      </div>
 			      <!--/.nav-collapse -->
 			    </div>
 			  </nav>
 		</div>
+		
 		<div id="forminside" style="display:block;">
-			<form id="sub">
+			<form id="sub" >
 				<div class="row" id = "customcontainer"  style="width:100%; margin-top: 50px;">
 					<div class="col-md-5">
 						<div class="container">
@@ -202,7 +203,7 @@
 												<div class="form-group">
 														<label for="state"> Consignee State</label>
 														<br>
-														<select id="consignee_state" class="form-control">
+														<select id="consignee_state" name="consignee_state"  class="form-control">
 														<option value="">Select state</option>
 														<option value="Bihar">Bihar</option>
 														<option value="Jharkhand">Jharkhand</option>
@@ -255,7 +256,7 @@
 												<div class="form-group">
 														<label for="state"> Buyer State</label>
 														<br>
-														<select id="buyer_state" class="form-control">
+														<select id="buyer_state" class="form-control" name="buyer_state">
 														<option value="">Select state</option>
 														<option value="Bihar">Bihar</option>
 														<option value="Jharkhand">Jharkhand</option>
@@ -277,12 +278,12 @@
 													<div class="container">
 														
 													
-															<input id="buttonSubmit" type="button"  onclick="mySubmit()"  value="Submit" class="buttoninsert" />
-														
+															<input id="buttonSubmit" type="button"  onClick="mySubmit()"  value="Submit" class="buttoninsert" >
 													</div>
 												</div>
 
 											</div>
+
 
 											
 										 
@@ -302,6 +303,7 @@
 				
 			</form>
 		</div>	
+		<p id="txtHint3">hey</p>
 		<br>
 		
 		
@@ -384,7 +386,7 @@
 		    			<table class="table table-bordered table-condensed">
 		    				<thead>
 		    					<tr>
-		    						<th>Dispatch Document No.</th>
+		    						<th>Dsipatch Document No.</th>
 		    						<th>Dispatch through</th>
 		    						<th>Vehicle No.</th>
 		    						<th>Destiination</th>
@@ -572,6 +574,6 @@
 		</div>
 
 		
-		
+	
 	</body>
 </html>
