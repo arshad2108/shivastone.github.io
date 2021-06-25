@@ -17,12 +17,13 @@
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/invoice.css" />
 	
 
 </head>
 
 <body>
-  <div id="preload">
+  <div id="preload" class="container">
     <span class='letter'>L</span>
     <span class='letter'>O</span>
     <span class='letter'>A</span>
@@ -51,10 +52,14 @@
 
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li onclick="navigate(nav_index)" id="nav_index" class="active"><a  >Home <span>Main Page</span></a></li>
-          <li onclick="navigate(nav_about)" id="nav_about" ><a >About<span>Who Are We?</span></a></li>
-          <li onclick="navigate(nav_services)" id="nav_services"><a >Services <span>What do we do?</span></a></li>
-          <li onclick="navigate(nav_contact)" id="nav_contact"><a>Contact <span>Get in touch</span></a></li>
+          <li onclick="navigate(this.id)" id="nav_index" class="active"><a  >Home <span>Main Page</span></a></li>
+          <li onclick="navigate(this.id)" id="nav_about" ><a >About<span>Who Are We?</span></a></li>
+          <li onclick="navigate(this.id)" id="nav_services"><a >Services <span>What do we do?</span></a></li>
+
+
+
+
+          <li onclick="navigate(this.id)" id="nav_contact"><a>Contact <span>Get in touch</span></a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -127,32 +132,30 @@
     <section class="section-secondary slogan">
       <h1>Take a closer look</h1>
       <p>About what we do and what we are?</p>
-      <a  onclick="navigate(nav_about)" class="btn btn-lg btn-default">More Info</a>
+      <a  onclick="navigate('nav_about')" class="btn btn-lg btn-default">More Info</a>
     </section>
- <div class="wow fadeIn">
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="wow fadeInLeft">
-              <h2 class="page-header">About Us...</h2>
-              <p>We M/S Shiva Stone started processing Industrial Mineral in 2019 in Patratu, Ramgarh, Jharkhand. Since then, we have grown into a diverse and respected enterprise. We have set new benchmarks in the industry with our high quality products and commitment to customer satisfaction.</p>
-
-                    <p>We are a name that reflects commitment to quality. We diligently follow the policy of customer satisfaction. In order to retain their confidence, we deliver the raw materials as per their requirements.</p>
-
-                    <p>The company is dealing in an array of products such as Quartz Boulder, Quartz Metal etc. We are situated in Sutharpur, Patratu, Ramgarh, Jharkhand.
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="wow fadeInRight">
-              <img src="img/about2.jpeg" class="img-responsive">
-            </div>
-          </div>
-        </div>
+  
+    <section class="wow fadeIn">
+      <div class="container"> 
+        <div class="row"> 
+          <div class="col-md-6">  
+            <div class="wow fadeInLeft">  
+              <h2 class="page-header">About Us...</h2>  
+              <p>We M/S Shiva Stone started processing Industrial Mineral in 2019 in Patratu, Ramgarh, Jharkhand. Since then, we have grown into a diverse and respected enterprise. We have set new benchmarks in the industry with our high quality products and commitment to customer satisfaction.</p> 
+                    <p>We are a name that reflects commitment to quality. We diligently follow the policy of customer satisfaction. In order to retain their confidence, we deliver the raw materials as per their requirements.</p>  
+                    <p>The company is dealing in an array of products such as Quartz Boulder, Quartz Metal etc. We are situated in Sutharpur, Patratu, Ramgarh, Jharkhand.  
+            </div>  
+          </div>  
+          <div class="col-md-6">  
+            <div class="wow fadeInRight"> 
+              <img src="img/about2.jpeg" class="img-responsive">  
+            </div>  
+          </div>  
+        </div>  
       </div>
     </section>
-</div>
-<!--
+    <!--
+
     <div class="wow fadeIn">
       <section class="section-primary">
         <div class="container">
@@ -175,9 +178,10 @@
         </div>
       </section>
     </div>
-  
+  -->
+
     
--->
+
   </div>
 
 
@@ -212,7 +216,7 @@
                     <p>The company is dealing in an array of products such as Quartz Boulder, Quartz Metal etc. We are situated in Sutharpur, Patratu, Ramgarh, Jharkhand.
                     <br>
                     <br>
-                    <a onclick="navigate(nav_contact)" class="btn btn-primary btn-lg">Contact Us!</a>
+                    <a onclick="navigate('nav_contact')" class="btn btn-primary btn-lg">Contact Us!</a>
                 </div>
             </div>
         </div>
@@ -236,7 +240,7 @@
             </ul>    
                 
         </div>
-  <!--
+    <!--
         <div class="col-md-4">
           <img class="img-responsive img-thumbnail img-circle" src="../img/man1.jpg" alt="man">
             <h3>Jeff Bridges <small>Designer</small></h3>
@@ -295,7 +299,7 @@
               <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
             </ul>
         </div>
-  -->
+    -->
       </div>
     </section>
     <section>
@@ -319,15 +323,13 @@
           
         </div>
 
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a href="#">
+        <div class="col-md-3 col-sm-4 col-xs-6">  
+          <a href="#">  
+            
+            <img class="img-responsive img-customer" src="img/bfcl_logo.png" alt="client" height="30%" width="30%"> 
+            
           
-            <img class="img-responsive img-customer" src="img/bfcl_logo.png" alt="client" height="30%" width="30%">
-          
-         
-
-
-          </a>
+          </a>  
        </div>
 
         
@@ -377,16 +379,15 @@
              </a>
              
             </div>
-	<div class="col-md-3 col-sm-4 col-xs-6">
-          <a href="#">
-          <!--
-            <img class="img-responsive img-customer" src="img/mineral.png" alt="client" height="70%" width="70%">
-          -->
-          <h3> Mineral Resources </h3>
+            <div class="col-md-3 col-sm-4 col-xs-6">  
+          <a href="#">  
+          <!--  
+            <img class="img-responsive img-customer" src="img/mineral.png" alt="client" height="70%" width="70%"> 
+          --> 
+          <h3> Mineral Resources </h3>  
+          </a>  
+       </div> 
 
-
-          </a>
-       </div>
 
       </div>
     
@@ -412,16 +413,18 @@
 
     <section>
       <div class="container">
+        <!--
         <div class="row">
           <div class="col-md-12">
             <img src="img/people.jpg" alt="people" class="img-responsive">
           </div>
         </div>
+        -->
 
         <div class="row">
           <div class="col-md-8">
             <h2 class="page-header">Our Services</h2>
-            <p>We supply quartz boulders to the foundary and steel plants etc.</p>
+              <p>We supply quartz boulders to the foundary and steel plants etc.</p>
           </div>
           <div class="col-md-4">
             <h2 class="page-header">Create Invoice</h2>
@@ -429,7 +432,318 @@
             <a class="btn btn-primary" href="invoice.html">Generate Invoice</a>
           </div>
         </div>
-<!-- 
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="page-header">Show invoices</h2>
+            
+            <form id="view">
+              <div class="form-group">
+                <label for="interval"> Select month</label>
+                <br>
+                <select  id="interval" >
+                  <option value=-1>Select month:</option>
+                  
+                  <option value=1>January</option>
+                  <option value=2>February</option>
+                  <option value=3>March</option>
+                  <option value=4>April</option>
+                  <option value=5>May</option>
+                  <option value=6>June</option>
+                  <option value=7>July</option>
+                  <option value=8>August</option>
+                  <option value=9>September</option>
+                  <option value=10>October</option>
+                  <option value=11>November</option>
+                  <option value=12>December</option>
+                </select>
+              
+              
+
+
+
+              <a class="btn btn-primary" onclick="showInv()">show Invoice</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="txtHint5"> Results will be displayed here
+            </div>
+            
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" >
+            Invoice will be shown here 
+            <div class="container invoice" id="inv_view" style="display:none">
+              
+              <div class="invoice-header">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <h1>Tax Invoice</h1>
+                    <h4 > No : <span id = "inv_no" >inv no</span><b> | </b>Date : <span id = "inv_date" >date</span>
+                    </h4>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="media">
+                      
+                      <ul class="media-body list-unstyled">
+                        <li><strong><big><big>M/S Shiva Stone</big></big></strong></li>
+                        <li><b>Address :</b> At Sutharpur, PO - Bhadaninagar, <br>
+                        PS - Patratu, District - Ramgarh, PIN Code - 829105</li>
+                        <li><b>GSTIN/UIN : </b>20EEOPB 1530NIZQ</li>
+                        <li><b>State Name : </b>Jharkhand, <b>Code : </b>20</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="invoice-body">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Consignee Details</h3>
+                      </div>
+                      <div class="panel-body">
+                        <dl class="dl-horizontal">
+                          <dt>Name : </dt>
+                          <dd id="inv_consig_name" >Consignee</dd>
+                          <dt>Address : </dt>
+                          <dd id="inv_consig_add">Address</dd>
+                          <dt>GSTIN/UIN : </dt>
+                          <dd id="inv_consig_gst">gst</dd>
+                          <dt>State : </dt>
+                          <dd id="inv_consig_state">State</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Buyer Details</h3>
+                      </div>
+                      <div class="panel-body">
+                        <dl class="dl-horizontal">
+                          <dt>Name : </dt>
+                          <dd id="inv_buyer_name" >Buyer</dd>
+                          <dt>Address : </dt>
+                          <dd id="inv_buyer_add">Address</dd>
+                          <dt>GSTIN/UIN : </dt>
+                          <dd id="inv_buyer_gst">gst</dd>
+                          <dt>State : </dt>
+                          <dd id="inv_buyer_state">State</dd>
+                      </dl>
+
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Transportation Details</h3>
+                        
+                      </div>
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th>Dsipatch Document No.</th>
+                            <th>Dispatch through</th>
+                            <th>Vehicle No.</th>
+                            <th>Destiination</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td id="inv_permit">permit no</td>
+                            <td>By Road</td>
+                            <td id="inv_vehicle"> vehicle no.</td>
+                            <td id="inv_destination">destination</td>
+                          </tr>
+                        </tbody>
+                        
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Services / Products</h3>
+                      </div>
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th >Sl No.</th>
+                            <th>Item / Details</th>
+                            <th>HSN/SAC</th>
+                            <th class="text-center colfix">Quantity</th>
+                            <th class="text-center colfix">Rate/MTS</th>
+                            <th class="text-center colfix">Sum Cost</th>
+                            <th class="text-center colfix">Tax</th>
+                            <th class="text-center colfix">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              1
+                            </td>
+                            <td>
+                              QUARTZITE ROM(L)
+                            </td>
+                            <td>
+                              2506
+                            </td>
+                            <td class="text-right">
+                              <span  id="inv_quantity">quantity</span>
+                              
+                            </td>
+                            <td class="text-right">
+                              INR <span  id="inv_rate">rate</span>
+                              
+                            </td>
+                            
+                            <td class="text-right">
+                              INR <span  id="inv_sumcost">sum cost</span>
+                              
+                            </td>
+                            <td class="text-right">
+                              INR <span  id="inv_tax">tax</span>
+                              
+                            </td>
+                            <td class="text-right">
+                              <strong>
+                              INR <span  id="inv_total">total
+                              </span>
+                              </strong>
+                              <br>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="panel panel-default">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <td class="text-center col-xs-1">Sum Total</td>
+                            <td class="text-center col-xs-1"><b>2.5%</b> CGST (Central Tax)</td>
+                            <td class="text-center col-xs-1"><b>2.5%</b> SGST (State Tax) </td>
+                            <td class="text-center col-xs-1"><b>5.0%</b> IGST </td>
+                            <td class="text-center col-xs-1">Total Tax</td>
+                            <td class="text-center col-xs-1">Final</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_sumtotal">sum total</span></th>
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_ctax">central tax</span></th>
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_stax">state tax</span></th>
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_itax">igst tax</span></th>
+                            
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_tax">tax</span></th>
+                            <th class="text-center rowtotal mono" >INR <span id="inv_tx_final">final</span></th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <i>Declaration</i>
+                        <hr style="margin:3px 0 5px" /> We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Payment Method</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p>For your convenience, you may deposite the final amount in the given bank details.</p>
+                        <ul class="list-unstyled">
+                          <li><b>Bank Name - </b><span class="mono">State Bank of India</span></li>
+                          <li><b>A/C No. - </b><span class="mono">38765344815</span></li>
+                          <li><b>Branch Name - </b><span class="mono">Lapanga</span></li>
+                          <li><b>IFSC Code - </b><span class="mono">SBIN0005857</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="invoice-footer">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <br>Thank you for choosing our services.
+                    <br/> We hope to see you again soon
+                    <br/>
+                    <strong>~M/S SHIVA STONE~</strong>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Payment Method</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p><b>For M/S SHIVA STONE</b></p>
+                        <p>
+                          <br>
+                        </p>
+                        <p align=right><i>Authorized Signatory</i></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p style="text-align: center;"><b>SUBJECT TO RAMGARH JURISDICTION</b></p>
+                  <p style="text-align: center;">This is a Computer generated invoice</p>
+                </div>
+              </div>
+              <div id="customdiv3" class="row" style="display:none;">
+                <div class="col-xs-3" align="left">
+                
+                  <input id="printbutton" type="button" onclick="myPrint()"  value="Print Invoice" style="display:block;" class="buttoninsert" />
+                  
+                      <div class="form-group" id="verify" style="display:none;">
+                        <label for="passowrd" >Password</label>
+                        <input type="password" class="form-control" id="pwd" name="password" />
+                        
+                      </div>
+                  <input id="proceedbutton" type="button" onclick="myProceed()"  value="Proceed" style="display:none;" class="buttoninsert" />
+                  <p id="prompt" style="display:none;"></p>
+                    
+                  
+
+                
+                </div>
+              
+              </div>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!--
         <div class="row">
           <div role="tabpanel">
 
@@ -504,7 +818,9 @@
             <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
           </div>
         </div>
--->       
+        -->
+
+        
       </div>
     </section>
 
@@ -542,8 +858,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3073.8742471839078!2d85.37263493794842!3d23.62322151645274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c74bbd106e1d84!2sShiva%20Stone!5e0!3m2!1sen!2sin!4v1623677496609!5m2!1sen!2sin" width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen="" loading="lazy"></iframe>
-		 <h3>Contact Us Today!</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3073.8742471839078!2d85.37263493794842!3d23.62322151645274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c74bbd106e1d84!2sShiva%20Stone!5e0!3m2!1sen!2sin!4v1623677496609!5m2!1sen!2sin" width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen="" loading="lazy"></iframe>
+            <h3>Contact Us Today!</h3>
                   <form>
                     <div class="form-group">
                       <label>Name</label>
@@ -560,24 +876,24 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
           </div>
-          <div class="col-md-4">
-            <h3>Contact Details</h3>
-                  <p>
-                      At chikor, PO - Bhadaninagar,<br>Ps - Patratu, Dist - Ramgarh<br> Ranchi, Jharkhand - 829105<br>
-                  </p>
-                  <p><i class="fa fa-phone"></i> 
-                      <abbr title="Phone"></abbr>: (+91) 9431723245</p>
-                  <p><i class="fa fa-envelope-o"></i> 
-                      <abbr title="Email"></abbr>: <a href="mailto:shivastone786@gmail.com">shivastone786@gmail.com</a>
-                  </p>
-                  <p><i class="fa fa-clock-o"></i> 
-                      <abbr title="Hours"></abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
-                  <ul class="list-unstyled list-inline list-social-icons">
-              <li class="tooltip-social facebook-link"></li><a href="https://www.facebook.com/sraza4u" style="color: #3b5998;" data-toggle="tooltip" data-placement="top" title="Facebook" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
-              <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/in/sajjad-raza-071542214" style="color: #0077B5;" data-toggle="tooltip" data-placement="top" title="LinkedIn" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li>
-              <li class="tooltip-social twitter-link"><a href="https://twitter.com/raza_sajjad786?s=09" style="color: #55acee;" data-toggle="tooltip" data-placement="top" title="Twitter" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-              <li class="tooltip-social instagram-link"><a href="https://www.instagram.com/sajjadraza9743/" style="color: #ac2bac;"" data-toggle="tooltip" data-placement="top" title="instagram" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
-            </ul> 
+          <div class="col-md-4">  
+            <h3>Contact Details</h3>  
+                  <p> 
+                      At chikor, PO - Bhadaninagar,<br>Ps - Patratu, Dist - Ramgarh<br> Ranchi, Jharkhand - 829105<br>  
+                  </p>  
+                  <p><i class="fa fa-phone"></i>  
+                      <abbr title="Phone"></abbr>: (+91) 9431723245</p> 
+                  <p><i class="fa fa-envelope-o"></i>   
+                      <abbr title="Email"></abbr>: <a href="mailto:shivastone786@gmail.com">shivastone786@gmail.com</a> 
+                  </p>  
+                  <p><i class="fa fa-clock-o"></i>  
+                      <abbr title="Hours"></abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>  
+                  <ul class="list-unstyled list-inline list-social-icons">  
+              <li class="tooltip-social facebook-link"></li><a href="https://www.facebook.com/sraza4u" style="color: #3b5998;" data-toggle="tooltip" data-placement="top" title="Facebook" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook fa-2x"></i></a></li> 
+              <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/in/sajjad-raza-071542214" style="color: #0077B5;" data-toggle="tooltip" data-placement="top" title="LinkedIn" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li> 
+              <li class="tooltip-social twitter-link"><a href="https://twitter.com/raza_sajjad786?s=09" style="color: #55acee;" data-toggle="tooltip" data-placement="top" title="Twitter" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter fa-2x"></i></a></li> 
+              <li class="tooltip-social instagram-link"><a href="https://www.instagram.com/sajjadraza9743/" style="color: #ac2bac;"" data-toggle="tooltip" data-placement="top" title="instagram" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram fa-2x"></i></a></li>  
+            </ul>   
           </div>
         </div>
       </div>
@@ -599,6 +915,7 @@
   <script src="javascript/bootstrap.min.js"></script>
   <script src="javascript/wow.js"></script>
   <script src="javascript/index.js"></script>
+  <script src="javascript/invoice.js"></script>
   
   <script>
     new WOW().init();
