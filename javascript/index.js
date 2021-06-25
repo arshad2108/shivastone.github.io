@@ -9,9 +9,20 @@ document.onreadystatechange = function() {
 	}
 };
 
- 
-function navigate(obj){
+function sleep(time) {
+	return new Promise(resolve => setTimeout(resolve, time));
+ }
+ function transit(w){
+	
+	
+	document.getElementById(w).className="animated fadeOutRight";
+
+
+ }
+
+function navigate(id){
 // Get all buttons with class="btn" inside the container
+
 
 // Loop through the buttons and add the active class to the current/clicked button
 
@@ -24,21 +35,20 @@ function navigate(obj){
 		var w=past.slice(4);
 		
 		
-		
+		var obj=document.getElementById(id);
 		
 		
 		obj.className ="active";
 		var cur=obj.id;
 		var v=cur.slice(4);
-		
-		document.getElementById(w).className="animated fadeOutRight";
+		transit(w);
 		setTimeout(function() {
 			//console.log("waiting");
 			document.getElementById(w).style.display="none";
-			document.getElementById(v).style.display="block";
+		document.getElementById(v).style.display="block";
 		
 		
-			document.getElementById(v).className="animated fadeInLeft";
+		document.getElementById(v).className="animated fadeInLeft";
 			
 		}, 550 );
 		
