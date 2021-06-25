@@ -291,7 +291,7 @@ function mySubmit(){
 	document.getElementById("customdiv3").style.display="block";
 	
 	
-	upload();
+	//upload();
 	return;
 
 }
